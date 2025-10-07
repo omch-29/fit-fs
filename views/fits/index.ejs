@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fwcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image" href="iconfw.jpg">
+    <title>Fitmate- your ultimate guide for fitness!!</title>
+</head>
+<body>
+<button id="toggle-btn" class="toggle-btn">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+   <div id="sidebar">
+    <h2><i class="fas fa-dumbbell"></i> Fitmate</h2>
+    <nav>
+  <ul>
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <hr>
+    <li><a href="exercises.html"><i class="fa-solid fa-circle-user fa-beat"></i> Login</a></li>
+    <hr>
+    <li><a href="guest.html"><i class="fa-solid fa-circle-user fa-beat"></i> Continue as Guest</a></li>
+    <hr>
+    <li><a href="membership.html"><i class="fas fa-crown"></i> Membership plans</a></li>
+    <hr>
+    <li><a href="about.html"><i class="fa-solid fa-address-card"></i>  About</a></li>
+    <hr>
+    <li><a href="fitness-plan.html">💪 Fitness Plan</a></li>
+    <hr>
+    <li><a href="tips.html"><i class="fa-solid fa-lightbulb fa-beat-fade"></i> Tips</a></li>
+    <hr>
+    <li><a href="workout.html"><i class="fa-solid fa-dumbbell fa-spin fa-spin-reverse"></i>  Workout suggestion</a></li>
+    <hr>
+    <li><a href="meal.html"><i class="fa-solid fa-bowl-rice fa-flip"></i> Meal suggestion</a></li>
+    <hr>
+  </ul>
+</nav>
+
+   </div>
+   
+    <div id="main">
+        <br><br>
+    <h1>Welcome to Fitmate</h1>
+    <p>Your personal fitness suggestion buddy!!</p>
+      <div class="logo-cta-container">
+        <img src="fwimage1.jpg" alt="fitness banner" class="main-banner">
+        <div class="cta-text">
+            <button class="btn-getfit">Get Fit with Fitmate</button>
+            <h2>Unleash your fitness potential</h2>
+              <div class="cta-item">
+        <img src="exerci.jpg" alt="Exercise Icon" class="cta-icon">
+        
+        <div class="cta-text-block">
+            <a href="top10.html" class="cta-link">10 Exercises to Get Your Body in Tone</a>
+            <hr> <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+            
+            
+            </div>
+    </div>
+    <div class="button-container">
+    <a href="membership.html" class="custom-button">View Subscription/Membership Plans</a>
+    <a href="meal.html" class="custom-button">Get Your Meals</a>
+    <a href="30days.html" class="custom-button">Take 30 Days Fitness Challenge</a>
+    <a href="workout.html" class="custom-button">Get Your Daily Workout Plan</a>
+    </div>
+    
+</div>
+
+    
+    <div class="login-section">
+    <i class="fa-solid fa-user fa-2xl"></i>
+    <a href="exercises.html">
+        <button class="btn-login"></i>Login/sign up </button>
+        </a>
+        <a href="guest.html">
+        <button class="btn-guest">Continue as Guest</button>
+    </a>
+    </div>
+  </div>
+  <!--new-->
+  <div class="testimonials-section">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <img src="user1.jpg" alt="User 1 Photo" class="testimonial-photo">
+            <p>"Fitmate helped me lose 15 pounds in just two months! The workout plans and meal suggestions were a game-changer."</p>
+            <h4>- Jane Doe</h4>
+        </div>
+        <div class="testimonial">
+            <img src="user2.jpg" alt="User 2 Photo" class="testimonial-photo">
+            <p>"I've never felt stronger. The daily workout plans are easy to follow and incredibly effective. Highly recommend!"</p>
+            <h4>- John Smith</h4>
+        </div>
+        </div>
+</div>
+<a href="contact.html">
+<button class="cont">contact us</button></a>
+<!--end-->
+  <footer class="site-footer">
+    <p>© 2025 Fitmate. All rights reserved.</p>
+    <p class="disclaimer">
+        Disclaimer: All fitness tips, suggestions, and workout plans provided here are for general purposes only.
+        Please consult a certified trainer or healthcare professional before starting any new fitness program.
+    </p>
+</footer>
+<script>
+    //toggle start
+    const toggleBtn = document.getElementById('toggle-btn');
+const sidebar = document.getElementById('sidebar');
+const main = document.getElementById('main');
+
+toggleBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('closed');
+  main.classList.toggle('expanded');
+});//toggle end
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentIndex = 0;
+
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.style.display = (i === index) ? 'block' : 'none';
+        });
+    }
+
+    function nextTestimonial() {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        showTestimonial(currentIndex);
+    }
+
+    showTestimonial(currentIndex);
+
+    setInterval(nextTestimonial, 5000);
+</script>
+</body>
+</html>
