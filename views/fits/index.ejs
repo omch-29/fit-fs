@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fwcss.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image" href="iconfw.jpg">
-    <title>Fitmate- your ultimate guide for fitness!!</title>
-</head>
-<body>
+<% layout("/layouts/boilerplate") %>
+
 <button id="toggle-btn" class="toggle-btn">
     <i class="fa-solid fa-bars"></i>
   </button>
@@ -44,7 +35,7 @@
     <h1>Welcome to Fitmate</h1>
     <p>Your personal fitness suggestion buddy!!</p>
       <div class="logo-cta-container">
-        <img src="fwimage1.jpg" alt="fitness banner" class="main-banner">
+        <img src="images/fwimage1.jpg" alt="fitness banner" class="main-banner">
         <div class="cta-text">
             <button class="btn-getfit">Get Fit with Fitmate</button>
             <h2>Unleash your fitness potential</h2>
@@ -132,5 +123,3 @@ toggleBtn.addEventListener('click', () => {
 
     setInterval(nextTestimonial, 5000);
 </script>
-</body>
-</html>
