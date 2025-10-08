@@ -26,6 +26,10 @@ app.get("/", (req, res)=>{
     res.render("fits/index.ejs");
 });
 
+app.get("/login", (req, res)=>{
+    res.send("login page");
+});
+
 app.listen(port, ()=>{
     console.log(`listening on ${port}`);
 });
