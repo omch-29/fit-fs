@@ -1,0 +1,32 @@
+<% layout("/layouts/boilerplate") %>
+
+    <div class="login-container">
+        <h1>Login to FitMate</h1>
+        <p class="subtitle">Welcome back! Please enter your details.</p>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-options">
+                <label>
+                    <input type="checkbox" name="remember"> Remember me
+                </label>
+                <a href="forgot-password.html" class="forgot-link">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+
+            <p class="signup-text">Don't have an account? <a href="signup.html">Sign up</a></p>
+        </form>
+    </div>
+
+</body>
+</html>
