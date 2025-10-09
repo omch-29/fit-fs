@@ -26,6 +26,10 @@ app.get("/", (req, res)=>{
     res.render("fits/index.ejs");
 });
 
+// app.get("/home",(req,res)=>{
+//     res.send("hello home");
+// })
+
 app.get("/login", (req, res)=>{
     res.render("fits/login");
 });
