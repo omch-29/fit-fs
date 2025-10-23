@@ -33,6 +33,9 @@ app.get("/", (req, res)=>{
 app.get("/login", (req, res)=>{
     res.render("fits/login");
 });
+app.get("/guest", (req, res) => {
+    res.render("fits/guest.ejs");
+})
 
 app.listen(port, ()=>{
     console.log(`listening on ${port}`);
